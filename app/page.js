@@ -1,23 +1,12 @@
-export default function Home() {
-  return <Navbar />;
-}
 
-function Navbar() {
+export default function Home() {
   return (
-    <nav className="border-b border-gray-800 sticky top-0 bg-gray-900 text-gray-100 z-10">
-      <div className="h-14 max-w-7xl p-4 mx-auto flex items-center justify-between">
-        <a href="/" className="font-medium text-lg md:hover:underline">
-          My Website
-        </a>
-        <ul className="flex items-center justify-end space-x-4 text-sm font-medium">
-          <li className="md:hover:underline">
-            <a href="/blog">Blog</a>
-          </li>
-          <li className="md:hover:underline">
-            <a href="/photos">Photos</a>
-          </li>
-        </ul>
+    <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+      <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10 space-y-6 py-8 text-base leading-7 text-gray-600">
+        <p class="[vm=10%] blue">
+          Hello World!
+        </p>
       </div>
-    </nav>
+    </div>
   )
 }
