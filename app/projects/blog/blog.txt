@@ -1,0 +1,2 @@
+Welcome to the blog!
+This blog is an interactive writing space that can permanently change based on user input.
