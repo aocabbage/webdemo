@@ -26,7 +26,7 @@ export default function Home() {
       </div>
     </div>
     <div className="my-12">
-      <SectionHeader title="What do I do?" text="As a student at the University of Washington" style="mb-12"/>
+      <SectionHeader title="What do I do?" text="As a student at the University of Washington"/>
       <FlexFlip>
         <LinkedContainter title="Programming" url="/projects">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo vestibulum quam, quis pulvinar ante. Aliquam sodales elementum nisi, vitae maximus lacus mollis tincidunt. Praesent tempor nunc nisi, sit amet rutrum dolor fringilla eu. Sed commodo, justo sit amet luctus molestie, leo erat venenatis nunc, et posuere nulla arcu ut augue. Sed felis diam, eleifend eget lacinia non, aliquam quis nibh. Aliquam vestibulum viverra ligula, vel suscipit lectus feugiat eget. Cras pulvinar venenatis nisl, et convallis metus placerat id. Integer congue tortor lectus. Cras vitae lorem egestas, bibendum tellus ut, mattis urna. Etiam placerat imperdiet quam eget porta. Proin vel diam lectus. Duis lorem lorem, iaculis vitae sagittis vel, finibus in ligula. 

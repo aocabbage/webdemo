@@ -5,7 +5,7 @@ import SectionHeader from "./SectionHeader";
 
 export function LinkedContainter({ children, title, url, style}) {
   return(
-  <DefaultContainer style={`mb-16 w-full sm:w-[30vw] ${style}`}>
+  <DefaultContainer baseStyle={`w-full sm:w-[30vw] mt-6 sm:mt-8 ${style}`}>
     <div className="py-4 space-y-2">
       <SectionHeader title={title}/>  
       <div className="mx-8 text-justify">
@@ -26,7 +26,7 @@ export function LinkedContainter({ children, title, url, style}) {
 
 export default function TextContainer({children, title, style}) {
   return (
-    <DefaultContainer style={style}>
+    <DefaultContainer baseStyle={style}>
       <div className="py-4 space-y-2">
       <SectionHeader title={title}/>
         <div className="mx-8 text-justify">
@@ -37,10 +37,22 @@ export default function TextContainer({children, title, style}) {
   )
 }
 
+export function BlogContainer({children, title, style}) {
+  
+  return(
+    <DefaultContainer baseStyle={`mx-0 sm:mx-1/5 ${style}`}>
+      <h1 className="text-2xl text-center font-bold">
+        {title}
+      </h1>
+      {children}
+    </DefaultContainer>
+  )
+}
+
 export function ImageContainer({children, title, text, url, style}) {
   return (
-    <DefaultContainer style={`sm:flex justify-center sm:justify-around max-w-2xl ${style}`}>
-      <div className="sm:shrink-0 w-[75vw] h-[75vw] mx-auto my-12 sm:m-0 rounded-full sm:rounded-none sm:h-full sm:w-1/2 overflow-hidden">
+    <DefaultContainer baseStyle={`flex flex-col sm:flex-row mx-auto ${style}`}>
+      <div className="sm:shrink-0 w-[75vw] h-[75vw] mx-auto my-12 sm:m-0 rounded-full sm:rounded-none sm:w-1/2 sm:h-auto overflow-hidden">
         <Image
           src={url}
           alt="Some image"
@@ -58,9 +70,9 @@ export function ImageContainer({children, title, text, url, style}) {
   )
 }
 
-function DefaultContainer({children, style}) {
+function DefaultContainer({children, baseStyle}) {
   return(
-    <div className={`relative sm:rounded-lg shadow-xl text-primary-900 border border-secondary-600 overflow-hidden ${style}`}>
+    <div className={`duration-300 hover:shadow-[0px_0px_15px] hover:shadow-secondary-600 my-16 relative sm:rounded-lg shadow-xl text-primary-900 border border-secondary-600 overflow-hidden ${baseStyle}`}>
       {children}
     </div>
   )

@@ -1,2 +1,12 @@
-This thing is crazy! Right?
-Right...?
+== THE CORIOLIS FORCE ==
+The prevailing wind direction is:
+    - weak from east to west in the polar latitudes.
+    - strong west to east in the mid-latitudes.
+    - fair east to west near the equator
+
+
+
+
+
+
+

@@ -1,46 +1,48 @@
 "use client"
 
 import blog from './blog.txt';
+import BlogContainer from '@/app/components/Container.js';
+import { updateTextFile } from '@/app/actions/update-text-file';
 
-import { useState } from 'react';
-import { updateBlog } from '../../actions/update-blog';
+import { useState } from "react";
 
 let blogText = blog;
+let lineHeight = 25;
 
 export default function Home() {
 
-  const [editable, setEditable] = useState(0);
+  const blogPath = 'app/projects/blog/blog.txt';
+
+  const [editable, setEditable] = useState(false);
   const [textContent, setTextContent] = useState(blogText);
 
   const saveToPage = () => {
     blogText = textContent;
-    updateBlog(textContent);
-    setEditable(0);
+    updateTextFile(textContent, blogPath);
+    setEditable(false);
   }
 
   const editableButton = "absolute bottom-4 right-8 text-primary-900 hover:underline hover:text-secondary-600 duration-300";
 
   return(
-  <div className="mt-24 flex flex-col justify-center w-full mx-auto py-10">
-    <div className="relative sm:rounded-lg shadow-xl text-primary-900 border border-secondary-600 w-full sm:w-[50%] sm:mx-[25%] py-4 space-y-2">
-      <h1 className="text-2xl text-center font-bold">
-        My Blog
-      </h1>
+  <div className="mt-28 sm:mt-32 justify-center">
+    <BlogContainer title="My Blog" style="mx-0 sm:mx-[20vw]">
       <div className="flex flex-col space=y-4 mx-8 text-justify">
-        {(editable==0) && <>{formatBlogData(blogText)}</>}
-        {(editable== 1) && <textarea id="savableText" value={textContent} onChange={e => setTextContent(e.target.value)} className="border border-primary-500"/>}
+        {(!editable) && <>{formatBlogData(blogText)}</>}
+        {(editable) && <textarea style={{height : lineHeight + 'px'}} id="savableText" value={textContent} onChange={e => setTextContent(e.target.value)} className="border border-primary-500"/>}
       </div>
       <div className="mt-4 w-full h-8 bg-primary-50">
-        {(editable == 0) && <button onClick={() => setEditable(1)} className={editableButton}>Edit</button>}
-        {(editable == 1) && <button onClick={() => saveToPage()} className={editableButton}>Save</button>}
+        {(!editable) && <button onClick={() => setEditable(true)} className={editableButton}>Edit</button>}
+        {(editable) && <button onClick={() => saveToPage()} className={editableButton}>Save</button>}
       </div>
-    </div>
+    </BlogContainer>
   </div>
   )
 }
 
 function formatBlogData(data) {
   const lineBreaks = data.split('\n');
+  lineHeight = lineBreaks.length * 24;
   let output = [];
   for (let index = 0; index < lineBreaks.length; index++) {
     output.push(<p key={index}>{lineBreaks[index]}</p>);
