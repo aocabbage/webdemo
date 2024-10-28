@@ -1,6 +1,6 @@
 export function Column({ children, style }) {
     return (
-        <div className={`relative flex flex-col w-full h-full text-primary-900 p-16 text-center ${style}`}>
+        <div className={`relative flex flex-col w-full text-primary-900 text-center sm:px-16 ${style}`}>
             {children}
         </div>
     )
@@ -8,9 +8,16 @@ export function Column({ children, style }) {
   
 export function Row({ children , style }) {
     return (
-    <div className={`relative flex flex-row w-full justify-evenly pb-10 pt-10 mx-auto overflow-hidden ${style}`} 
-    >
-        {children}
-    </div>
+        <div className={`relative flex flex-row w-full justify-evenly mx-auto overflow-hidden ${style}`} >
+            {children}
+        </div>
+    )
+}
+
+export function FlexFlip({children, style}) {
+    return(
+        <div className={`relative flex flex-col sm:flex-row w-full justify-evenly mx-auto overflow-hidden ${style}`} >
+            {children}
+        </div>
     )
 }

@@ -1,13 +1,13 @@
 import Link from "next/link";
-import SimpleContainter from "../components/Container";
+import TextContainer from "../components/Container";
 import { Column, Row } from "../components/Structures";
 import SectionHeader from "../components/SectionHeader";
 
 export default function Home() {
     return(
-        <div className="mt-24">
+        <div className="mt-28 sm:mt-32 mb-12">
             <Row>
-                <SimpleContainter>
+                <TextContainer style="w-full sm:w-[50vw]">
                     <SectionHeader title="Projects" text="so far..."/>
                     <ul>
                         <ListItem url="/projects/blog">
@@ -17,7 +17,7 @@ export default function Home() {
                             Photos of Animals
                         </ListItem>
                     </ul>
-                </SimpleContainter>
+                </TextContainer>
             </Row>
         </div>
     )

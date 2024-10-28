@@ -22,7 +22,7 @@ export default function Home() {
 
   return(
   <div className="mt-24 flex flex-col justify-center w-full mx-auto py-10">
-    <div className="relative rounded-lg shadow-xl text-primary-900 border border-secondary-600 w-[50%] mx-[25%] py-4 space-y-2">
+    <div className="relative sm:rounded-lg shadow-xl text-primary-900 border border-secondary-600 w-full sm:w-[50%] sm:mx-[25%] py-4 space-y-2">
       <h1 className="text-2xl text-center font-bold">
         My Blog
       </h1>

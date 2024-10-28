@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { LinkedContainter } from "./components/Container"
 import SectionHeader from "./components/SectionHeader"
-import { Column, Row } from "./components/Structures"
+import { Column, Row, FlexFlip } from "./components/Structures"
 
 import rainier from "./src/Images/rainier.jpg"
 
@@ -16,7 +16,7 @@ export default function Home() {
         placeholder="blur"
         style={{ width : '100%', height : '100%', objectFit : 'cover', objectPosition : 'center 20%'}}
       />
-      <div className="absolute bottom-4 ml-8 text-primary-50">
+      <div className="absolute bottom-4 mx-8 text-primary-50">
         <p className="text-7xl font-bold ">
           Andrew Cabbage
         </p>
@@ -25,9 +25,9 @@ export default function Home() {
         </p>
       </div>
     </div>
-    <Column>
-      <SectionHeader title="What do I do?" text="As a student at the University of Washington"/>
-      <Row>
+    <div className="my-12">
+      <SectionHeader title="What do I do?" text="As a student at the University of Washington" style="mb-12"/>
+      <FlexFlip>
         <LinkedContainter title="Programming" url="/projects">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo vestibulum quam, quis pulvinar ante. Aliquam sodales elementum nisi, vitae maximus lacus mollis tincidunt. Praesent tempor nunc nisi, sit amet rutrum dolor fringilla eu. Sed commodo, justo sit amet luctus molestie, leo erat venenatis nunc, et posuere nulla arcu ut augue. Sed felis diam, eleifend eget lacinia non, aliquam quis nibh. Aliquam vestibulum viverra ligula, vel suscipit lectus feugiat eget. Cras pulvinar venenatis nisl, et convallis metus placerat id. Integer congue tortor lectus. Cras vitae lorem egestas, bibendum tellus ut, mattis urna. Etiam placerat imperdiet quam eget porta. Proin vel diam lectus. Duis lorem lorem, iaculis vitae sagittis vel, finibus in ligula. 
         </LinkedContainter>
@@ -37,9 +37,9 @@ export default function Home() {
         <LinkedContainter title="Advocacy" url="/about-me">
         Duis accumsan purus a suscipit viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque ornare mattis hendrerit. Nulla finibus nunc ac est volutpat, convallis pretium sapien ultricies. Aliquam erat volutpat. Ut a justo id enim euismod sollicitudin. Aliquam finibus euismod velit, sit amet consectetur tortor accumsan vitae. Proin ac dui arcu. In sed magna neque. 
         </LinkedContainter>
-      </Row>
+      </FlexFlip>
       <SectionHeader title="Where do I come from?" text="I grew up not too long ago!"/>
-    </Column>
+    </div>
   </>
   )
 }
