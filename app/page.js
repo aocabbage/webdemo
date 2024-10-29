@@ -25,7 +25,7 @@ export default function Home() {
         </p>
       </div>
     </div>
-    <div className="my-12">
+    <div className="my-12 text-center">
       <SectionHeader title="What do I do?" text="As a student at the University of Washington"/>
       <FlexFlip>
         <LinkedContainter title="Programming" url="/projects">

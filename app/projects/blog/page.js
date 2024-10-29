@@ -26,7 +26,7 @@ export default function Home() {
 
   return(
   <div className="mt-28 sm:mt-32 justify-center">
-    <BlogContainer title="My Blog" style="mx-0 sm:mx-[20vw]">
+    <BlogContainer title="My Blog" style="text-center mx-0 sm:mx-[20vw]">
       <div className="flex flex-col space=y-4 mx-8 text-justify">
         {(!editable) && <>{formatBlogData(blogText)}</>}
         {(editable) && <textarea style={{height : lineHeight + 'px'}} id="savableText" value={textContent} onChange={e => setTextContent(e.target.value)} className="border border-primary-500"/>}

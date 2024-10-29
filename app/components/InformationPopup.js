@@ -1,6 +1,6 @@
 export default function InformationPopup({Title, Description, handleClose}) { 
   return(
-  <div className="absolute w-full h-full top-0 overflow-hidden z-20 py-[20%] px-[20%] bg-gradient-to-tr from-black/80 to-black/70">
+  <div className="fixed w-full h-full top-0 overflow-hidden z-20 py-[20%] px-[20%] bg-gradient-to-tr from-black/80 to-black/70 overflow-y-scroll">
     <div className="relative flex relative justify-center flex-col text-white">
       <h1 className="text-7xl font-bold">
         {Title}

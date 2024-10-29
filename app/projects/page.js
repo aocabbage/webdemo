@@ -6,19 +6,17 @@ import SectionHeader from "../components/SectionHeader";
 export default function Home() {
     return(
         <div className="mt-28 sm:mt-32 mb-12">
-            <Row>
-                <TextContainer style="w-full sm:w-[50vw]">
-                    <SectionHeader title="Projects" text="so far..."/>
-                    <ul>
-                        <ListItem url="/projects/blog">
-                            Live Blog
-                        </ListItem>
-                        <ListItem url="/projects/photos">
-                            Photos of Animals
-                        </ListItem>
-                    </ul>
-                </TextContainer>
-            </Row>
+            <TextContainer style="mx-0 sm:mx-[25vw] w-full sm:w-[50vw] pb-4">
+                <SectionHeader title="Projects" text="so far..." style="text-center"/>
+                <ul>
+                    <ListItem url="/projects/blog">
+                        Live Blog
+                    </ListItem>
+                    <ListItem url="/projects/photos">
+                        Photos of Animals
+                    </ListItem>
+                </ul>
+            </TextContainer>
         </div>
     )
 }

@@ -18,8 +18,8 @@ export default function Home() {
 
   return(
   <>
-    <div className="h-full w-full justify-center overflow-hidden bg-primary-50">
-      <div className="relative flex flex-row justify-evenly pb-10 pt-10 mx-auto mt-24 overflow-hidden">
+    <div className="h-full w-full justify-center overflow-hidden bg-primary-50 mt-20 sm:mt-24">
+      <div className="relative flex flex-col sm:flex-row justify-evenly mx-auto overflow-hidden">
         <MyImage onClick={() => setRenderMode(3)} url={pesto} alt="pesto the penguin"/>
         <MyImage onClick={() => setRenderMode(1)} url={timmy} alt="timmy the tiger"/>
         <MyImage onClick={() => setRenderMode(2)} url={roddy} alt="roddy the rat"/>
@@ -34,7 +34,7 @@ export default function Home() {
 
 function MyImage({ url, alt, onClick}) {
   return (
-    <div onClick={onClick} className="relative rounded-lg shadow-xl ring-1 ring-secondary-900/5 w-[30%] cursor-pointer hover:-translate-y-5 duration-300">
+    <div onClick={onClick} className="border border-secondary-600 mx-[5%] sm:mx-0 my-6 relative rounded-lg shadow-xl ring-1 ring-secondary-900/5 w-[90%] sm:w-[30%] cursor-pointer hover:-translate-y-5 duration-300">
       <Image 
       src={url}
       alt={alt} 
