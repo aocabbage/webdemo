@@ -1,3 +1,4 @@
+// Components
 import Link from "next/link";
 import Image from "next/image";
 import Form from "next/form";
@@ -38,15 +39,11 @@ export default function TextContainer({children, title, style}) {
   )
 }
 
-export function LoginContainer({style}) {
+export function LoginContainer({style, children}) {
   return(
     <DefaultContainer baseStyle={`mx-0 sm:mx-1/5 align-center ${style}`}>
       <SectionHeader title="Admin Login" style="mb-8"/>
-      <div className="flex flex-col space-y-4 w-1/2 mx-[25%]">
-        <input className="border border-secondary-600" placeholder="Username" name="username"/>
-        <input className="border border-secondary-600" type="password" placeholder="Password" name="password"/>
-        <button className="w-1/2 mx-[25%] border rounded-full border-secondary-600 text-secondary-600 bg-primary-50 hover:bg-secondary-600 hover:text-primary-50 duration-300">Submit</button>
-      </div>
+      {children}
     </DefaultContainer>
   )
 }

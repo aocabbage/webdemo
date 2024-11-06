@@ -1,6 +1,5 @@
 import Link from "next/link";
 import TextContainer from "../components/Container";
-import { Column, Row } from "../components/Structures";
 import SectionHeader from "../components/SectionHeader";
 
 export default function Home() {
@@ -14,6 +13,9 @@ export default function Home() {
                     </ListItem>
                     <ListItem url="/projects/photos">
                         Photos of Animals
+                    </ListItem>
+                    <ListItem url="/projects/stickynotes">
+                        Sticky Notes
                     </ListItem>
                 </ul>
             </TextContainer>

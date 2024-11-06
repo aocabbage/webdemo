@@ -1,12 +1,12 @@
 "use client"
 
-import blog from './blog.txt';
+import blog from './blog.json';
 import BlogContainer from '@/app/components/Container.js';
-import { updateTextFile } from '@/app/actions/update-text-file';
+import { updateBlogData } from '@/app/actions/update-text-file';
 
 import { useState } from "react";
 
-let blogText = blog;
+let blogText = blog.body;
 let lineHeight = 25;
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
 
   const saveToPage = () => {
     blogText = textContent;
-    updateTextFile(textContent, blogPath);
+    updateBlogData(textContent);
     setEditable(false);
   }
 
