@@ -1,7 +1,20 @@
 [
     {
-        "x": 10,
-        "y": 20,
-        "content": "hi hello who what huh!"
+        "id": 1,
+        "x": 100,
+        "y": 200,
+        "content": "Hey"
+    },
+    {
+        "id": 2,
+        "x": 500,
+        "y": 300,
+        "content": "Hey 2"
+    },
+    {
+        "id": 3,
+        "x": 250,
+        "y": 500,
+        "content": "Hey 3"
     }
 ]

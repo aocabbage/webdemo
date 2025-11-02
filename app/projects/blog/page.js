@@ -2,7 +2,7 @@
 
 import blog from './blog.json';
 import BlogContainer from '@/app/components/Container.js';
-import { updateBlogData } from '@/app/actions/update-text-file';
+import { updateBlogData } from './updateblog';
 
 import { useState } from "react";
 

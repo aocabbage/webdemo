@@ -17,6 +17,9 @@ export default function Home() {
                     <ListItem url="/projects/stickynotes">
                         Sticky Notes
                     </ListItem>
+                    <ListItem url="/projects/email">
+                        Email System
+                    </ListItem>
                 </ul>
             </TextContainer>
         </div>

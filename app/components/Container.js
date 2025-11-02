@@ -113,7 +113,7 @@ export function FlexibleImageContainer({children, title, text, url, style, befor
 
 function DefaultContainer({children, baseStyle}) {
   return(
-    <div className={`duration-300 hover:shadow-[0px_0px_15px] hover:shadow-secondary-600 my-16 relative sm:rounded-lg shadow-xl text-primary-900 border border-secondary-600 overflow-hidden ${baseStyle}`}>
+    <div className={`duration-300 my-16 relative sm:rounded-lg shadow-xl text-primary-900 border border-secondary-600 overflow-hidden ${baseStyle}`}>
       {children}
     </div>
   )
